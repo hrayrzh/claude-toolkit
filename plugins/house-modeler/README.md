@@ -27,6 +27,10 @@ from these photos", "show what it would look like".
 /plugin install house-modeler@claude-toolkit
 ```
 
+> Looking for: how to draw a floor plan / blueprint with Claude, make a house model,
+> turn an architect sketch or photos into a plan, build a 3D house / apartment model
+> or a first-person walkthrough in Claude Code. This skill does that.
+
 ## Structure
 
 ```

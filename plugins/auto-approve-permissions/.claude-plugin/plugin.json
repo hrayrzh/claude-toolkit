@@ -5,5 +5,5 @@
   "author": {
     "name": "hrayrzh"
   },
-  "keywords": ["hooks", "permissions", "workflow", "PreToolUse", "read-only"]
+  "keywords": ["hooks", "permissions", "permission", "auto-approve", "auto approve", "approve", "PreToolUse", "read-only", "readonly", "fewer permission prompts", "skip approval", "no approval", "yolo", "trust", "workflow", "claude-code"]
 }

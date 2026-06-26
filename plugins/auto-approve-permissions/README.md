@@ -2,6 +2,10 @@
 
 # Claude Code — auto-approve read-only, ask for writes
 
+> Looking for: how to stop Claude Code asking permission for every command, fewer
+> permission prompts, auto-approve read-only / safe commands, skip approval for
+> `ls`/`grep`/`cat` while still confirming writes. This hook does that.
+
 How I configured Claude Code so that **read-only / inspection commands run without a permission prompt**, while **anything that writes, deletes, modifies, or calls an external service still asks**. Drop-in reproducible — copy the hook + settings below.
 
 ## The principle
