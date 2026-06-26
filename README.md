@@ -1,60 +1,61 @@
+<div align="center">
+
 ![claude-toolkit](assets/banner.png)
 
 # claude-toolkit
 
-A small collection of Claude Code **plugins** — reusable hooks and skills. Install
-only the pieces you want; each is a separate plugin.
+**Reusable [Claude Code](https://www.claude.com/product/claude-code) plugins — hooks and skills.**
+Install only the pieces you want; each is a separate, self-contained plugin.
 
-> "Marketplace" below is just Claude Code's built-in word for a plugin source — it's
-> not a store and there's nothing to buy. Everything here is free and open.
+![Claude Code](https://img.shields.io/badge/Claude_Code-plugin-c6743a)
+![License: MIT](https://img.shields.io/badge/License-MIT-5fb47e)
+![Plugins](https://img.shields.io/badge/plugins-2-9fb4cd)
 
-## Install (one command per piece)
+</div>
 
-Add the marketplace once:
-
-```
-/plugin marketplace add hrayrzh/claude-toolkit
-```
-
-Then install any subset — one, two, or all:
-
-```
-/plugin install auto-approve-permissions@claude-toolkit
-```
-
-Each plugin installs its own hooks/skills and can be enabled/disabled independently.
-Nothing is forced — someone who wants only the hook installs only that; someone who
-wants two skills installs those two.
+---
 
 ## Plugins
 
-| Plugin | What it does |
-|---|---|
-| [`auto-approve-permissions`](plugins/auto-approve-permissions/) | `PreToolUse` hook — auto-approve read-only / inspection Bash commands (and WebSearch/WebFetch); still prompt for writes, deletes, mutations, external-API calls. |
-| [`house-modeler`](plugins/house-modeler/) | Skill — digitize floor plans (hand-drawn / photos) into accurate 2D SVG plans + an interactive walkable 3D model (Three.js) from one source of truth. Walls/doors/windows, areas, furniture clearances, plot, levels, sun-by-latitude, roofs; friendly interview for non-coders. |
-| _(more skills/hooks land here)_ | each as its own plugin in `plugins/<name>/` |
+| Plugin | Type | What it does |
+|---|---|---|
+| [**auto-approve-permissions**](plugins/auto-approve-permissions/) | hook | Auto-approves read-only / inspection commands and web search, so Claude Code stops asking permission for every `ls`, `grep`, `cat` — while still prompting for anything that writes, deletes, or calls an external service. |
+| [**house-modeler**](plugins/house-modeler/) | skill | Turns hand-drawn or photographed floor plans into accurate 2D plans (SVG) **and** an interactive, walkable 3D model (Three.js), from one source of truth. Walls, doors, windows, areas, furniture clearances, plot, levels, sun-by-latitude, roofs — plus a friendly interview for non-coders. |
 
-## Layout
+## Install
+
+Add the source once, then install whichever plugins you want:
+
+```bash
+/plugin marketplace add hrayrzh/claude-toolkit
+/plugin install auto-approve-permissions@claude-toolkit
+/plugin install house-modeler@claude-toolkit
+```
+
+Each plugin is enabled and disabled independently — nothing else is pulled in.
+
+> *Marketplace* is simply Claude Code's term for a plugin source. This is a free,
+> open-source collection — there is nothing to buy.
+
+## Repository layout
 
 ```
 claude-toolkit/
-├── .claude-plugin/
-│   └── marketplace.json          # lists every plugin (relative ./plugins/<name> sources)
+├── .claude-plugin/marketplace.json     # the plugin catalog
 └── plugins/
     └── <name>/
-        ├── .claude-plugin/plugin.json   # plugin manifest
-        ├── hooks/hooks.json             # (hook plugins) — uses ${CLAUDE_PLUGIN_ROOT}
-        ├── hooks/<script>               # (hook plugins)
-        ├── skills/<name>/SKILL.md       # (skill plugins)
+        ├── .claude-plugin/plugin.json  # plugin manifest
+        ├── hooks/        hooks.json + scripts   (hook plugins)
+        ├── skills/       <name>/SKILL.md        (skill plugins)
         └── README.md
 ```
 
-**One repo, many plugins** — not a repo per skill. Adding a new skill/hook = a new
-folder under `plugins/` + one entry in `marketplace.json`. This is how the official
-`anthropics` marketplaces are organized.
+## Manual install
 
-## Manual install (without the plugin system)
+Each plugin folder is self-contained. Instead of the plugin system you can copy a
+plugin's `hooks/` script into `~/.claude/hooks/` (global) or `<project>/.claude/hooks/`
+(per-project) and register it in the matching `settings.json` — see the plugin's own README.
 
-Each plugin folder is self-contained — you can also copy its `hooks/` script into
-`~/.claude/hooks/` (global) or `<project>/.claude/hooks/` (per-project) and register
-it in the matching `settings.json`. See the plugin's own README.
+## License
+
+MIT © [hrayrzh](https://github.com/hrayrzh)
