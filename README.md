@@ -28,6 +28,7 @@ wants two skills installs those two.
 | Plugin | What it does |
 |---|---|
 | [`auto-approve-permissions`](plugins/auto-approve-permissions/) | `PreToolUse` hook — auto-approve read-only / inspection Bash commands (and WebSearch/WebFetch); still prompt for writes, deletes, mutations, external-API calls. |
+| [`house-modeler`](plugins/house-modeler/) | Skill — digitize floor plans (hand-drawn / photos) into accurate 2D SVG plans + an interactive walkable 3D model (Three.js) from one source of truth. Walls/doors/windows, areas, furniture clearances, plot, levels, sun-by-latitude, roofs; friendly interview for non-coders. |
 | _(more skills/hooks land here)_ | each as its own plugin in `plugins/<name>/` |
 
 ## Layout

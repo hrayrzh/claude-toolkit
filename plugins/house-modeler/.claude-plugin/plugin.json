@@ -1,0 +1,9 @@
+{
+  "name": "house-modeler",
+  "description": "Digitize a building from hand-drawn or photographed floor plans into accurate 2D plans (SVG) and an interactive walkable 3D model (Three.js) from one source of truth — geometry in millimetres. Covers walls/doors/windows, area calc, interior furnishing to clearance standards, site/plot, levels, sun by latitude, and roofs. Includes a friendly interview for non-technical users.",
+  "version": "1.0.0",
+  "author": {
+    "name": "hrayrzh"
+  },
+  "keywords": ["architecture", "floor-plan", "3d", "threejs", "blueprint", "house", "skill"]
+}

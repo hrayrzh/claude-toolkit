@@ -11,6 +11,12 @@
       "description": "PreToolUse hook: auto-approve read-only / inspection Bash commands (and WebSearch/WebFetch) while still prompting for anything that writes, deletes, modifies, or calls an external service.",
       "category": "workflow",
       "source": "./plugins/auto-approve-permissions"
+    },
+    {
+      "name": "house-modeler",
+      "description": "Turn hand-drawn or photographed floor plans into accurate 2D plans (SVG) + an interactive walkable 3D model (Three.js) from one source of truth. Walls/doors/windows, areas, furnishing to clearance standards, plot, levels, sun-by-latitude, roofs; friendly interview for non-coders.",
+      "category": "productivity",
+      "source": "./plugins/house-modeler"
     }
   ]
 }
