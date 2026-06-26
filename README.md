@@ -2,8 +2,11 @@
 
 # claude-toolkit
 
-A Claude Code **plugin marketplace** — reusable hooks and skills. Install only the
-pieces you want; each is a separate plugin.
+A small collection of Claude Code **plugins** — reusable hooks and skills. Install
+only the pieces you want; each is a separate plugin.
+
+> "Marketplace" below is just Claude Code's built-in word for a plugin source — it's
+> not a store and there's nothing to buy. Everything here is free and open.
 
 ## Install (one command per piece)
 
