@@ -1,3 +1,5 @@
+![claude-toolkit](assets/banner.png)
+
 # claude-toolkit
 
 A Claude Code **plugin marketplace** — reusable hooks and skills. Install only the
