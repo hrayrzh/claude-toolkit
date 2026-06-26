@@ -1,0 +1,9 @@
+{
+  "name": "auto-approve-permissions",
+  "description": "Auto-approve read-only / inspection Bash commands and WebSearch/WebFetch; still prompt for writes, deletes, mutations, and external-API calls.",
+  "version": "1.0.0",
+  "author": {
+    "name": "hrayrzh"
+  },
+  "keywords": ["hooks", "permissions", "workflow", "PreToolUse", "read-only"]
+}

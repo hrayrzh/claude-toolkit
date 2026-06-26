@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-toolkit",
+  "description": "Reusable Claude Code hooks and skills — install only the pieces you want.",
+  "owner": {
+    "name": "hrayrzh"
+  },
+  "plugins": [
+    {
+      "name": "auto-approve-permissions",
+      "description": "PreToolUse hook: auto-approve read-only / inspection Bash commands (and WebSearch/WebFetch) while still prompting for anything that writes, deletes, modifies, or calls an external service.",
+      "category": "workflow",
+      "source": "./plugins/auto-approve-permissions"
+    }
+  ]
+}
