@@ -1,3 +1,5 @@
+![auto-approve-permissions](assets/banner.png)
+
 # Claude Code — auto-approve read-only, ask for writes
 
 How I configured Claude Code so that **read-only / inspection commands run without a permission prompt**, while **anything that writes, deletes, modifies, or calls an external service still asks**. Drop-in reproducible — copy the hook + settings below.
